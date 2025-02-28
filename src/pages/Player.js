@@ -34,19 +34,19 @@ export default Blits.Component('Player', {
             <Element y="14" x="14" w="32" h="32" :src="$playing ? 'assets/player/pause.png' : 'assets/player/play.png'" />
           </Element>
           <Element
-          
+
              y="22"
-        
+
                x="100"
-       
+
                 w="$progressLength"
-     
+
                   h="16"
-    
+
                    color="#ffffff80"
-  
+
                      :effects="[{type: 'radius', props: {radius:8}}]"
-          
+
           >
             <Element
               h="16"
@@ -88,7 +88,8 @@ export default Blits.Component('Player', {
     },
     async ready() {
       await PlayerManager.load({
-        streamUrl: 'https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8',
+        streamUrl:
+          'https://api.angelstudios.com/streaming/2f3d0382-ea82-4cdc-958e-84fbadadc710/master.m3u8?default_res=720&ts=1740595485&v=4&s=P2W%2BaK7l3j4pFTGemkIHdfCXzVJaC2xBj%2FvsH4AdWTPOlr6nnvZ6FvvGOkhhpLxmDuEhJRzet6GEN9RNaNPhSw%3D%3D',
       })
       const secondsToMmSs = (seconds) => new Date(seconds * 1000).toISOString().substr(14, 5)
       const duration = PlayerManager.getVideoDuration()
