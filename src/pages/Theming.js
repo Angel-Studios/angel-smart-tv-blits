@@ -1,20 +1,3 @@
-/*
- * Copyright 2023 Comcast Cable Communications Management, LLC
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- * http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- *
- * SPDX-License-Identifier: Apache-2.0
- */
-
 import Blits from '@lightningjs/blits'
 
 import Toggle from '../components/Toggle.js'
@@ -30,10 +13,10 @@ export default Blits.Component('Theming', {
       <Text y="1020" x="1160" size="28" :color="$$colors.get('color4')"
         >Use "up", "down", "left" and "right" to change the appearance</Text
       >
-        
+
       <Element :x.transition="(1920 - $$sizes.get('w')) / 2" :y.transition="(1080 - $$sizes.get('h')) / 2">
         <Element x="-250" y="-100" src="assets/shadow.png" w="1000" h="900" alpha="0.5" />
-        
+
         <!-- Header -->
         <Element
           :w.transition="$$sizes.get('w')"
@@ -48,7 +31,7 @@ export default Blits.Component('Theming', {
             :effects="[{type: 'radius', props: {radius: $radius}}]"
           />
           <Element :w.transition="$$sizes.get('w')" h="80" y="20" :color="$$colors.get('color2')" />
-        
+
           <Text :content="$text" :color="$$colors.get('color3')" size="28" x="20" y="14" />
           <Toggle
             :x.transition="$$sizes.get('w') - 120"
@@ -57,7 +40,7 @@ export default Blits.Component('Theming', {
             primaryColor="#22c55e"
           />
         </Element>
-        
+
         <!-- Blocks -->
         <Element
           w="200"
@@ -75,7 +58,7 @@ export default Blits.Component('Theming', {
           :color="$$colors.get('color2')"
           :effects="[{type: 'radius', props: {radius: $radius / 2}}]"
         />
-        
+
         <!-- Graph -->
         <Element
           :x.transition="$$sizes.get('graph.x')"

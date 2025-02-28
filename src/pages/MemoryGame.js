@@ -1,20 +1,3 @@
-/*
- * Copyright 2023 Comcast Cable Communications Management, LLC
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- * http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- *
- * SPDX-License-Identifier: Apache-2.0
- */
-
 import Blits from '@lightningjs/blits'
 import MemoryCard from '../components/MemoryCard.js'
 
@@ -59,7 +42,7 @@ export default Blits.Component('Announcer', {
     <Element>
       <Text font="raleway" size="80" color="white" content="Let's play memory!" x="580" y="60" />
       <Text font="kalam" size="40" color="#b91c1c" content="the Accessible edition :)" x="1200" y="170" rotation="-6" />
-    
+
       <Element x="260" y="260">
         <MemoryCard
           :for="(card, index) in $cards"
